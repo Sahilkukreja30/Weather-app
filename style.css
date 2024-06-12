@@ -79,3 +79,11 @@ button{
 sup{
     font-size: 50px;
 }
+
+.unactive{
+    visibility: hidden;
+}
+
+.active{
+    visibility: visible;
+}

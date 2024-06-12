@@ -5,6 +5,10 @@ let cityName = document.querySelector(".cityName")
 let temp = document.querySelector(".temp")
 let windSpeed = document.querySelector(".windSpeed")
 let humid = document.querySelector(".humid")
+let info = document.querySelector(".info")
+let otherInfo = document.querySelector(".otherInfo")
+const image = document.querySelector("img")
+
 
 function stringToIntegerAndFirstTwoValues(str) {
     // Convert string to integer
@@ -28,16 +32,22 @@ function stringToIntegerAndFirstTwoValues(str) {
 button.addEventListener("click", () =>{
     let city = ""
     city=input.value
-    cityName.innerHTML = city
+    
     
     // console.log(city);
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`).then((res) => res.json()).then(res => {
         
+        cityName.classList.add("active")
+        cityName.innerHTML = city
+
         temp.innerHTML = `${stringToIntegerAndFirstTwoValues(res.main.temp)}°C`
+        image.classList.add("active")
+        info.classList.add("active")
         windSpeed.innerHTML = `${res.wind.speed} km/h`
         humid.innerHTML = `${res.main.humidity} %`
+        otherInfo.classList.add("active")
         console.log(res);
-        const image = document.querySelector("img")
+        
 
         switch (res.weather[0].main) {
             case "Clear":
