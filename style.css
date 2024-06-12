@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    color: white;
+    background: linear-gradient(45deg, #0a0a0a,#3a4452);
+}
+
+.number{
+    font-size: larger;
+}
+
+img{
+    width: 20vh;
+    margin-top: 5vh;
+    margin-left: 8vh;
+   
+}
+
+.otherInfo{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 45px;
+}
+
+.container{
+    height: 60vh;
+    width: 40vh;
+    padding: 5vh;
+    border-radius: 16px;
+    background: linear-gradient(#e66465, #9198e5);
+}
+
+.logo{
+    display: flex;
+    gap: 8px;
+}
+
+.temp{
+    margin-top: 5px;
+    text-align: center;
+    font-size: 8vh;
+    
+}
+
+input{
+    border: none;
+    border-radius: 16px;
+    width: 80%;
+    height: 30px;
+    outline: none;
+    padding-left: 7px;    
+}
+
+button{
+    border: none;
+    border-radius: 16px;
+    width: 15%;
+    height: 30px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.cityName{
+    text-align: center;
+    font-size: 7vh;
+}
+.text{
+    font-size: smaller;
+    margin-left: 10px;
+}
+sup{
+    font-size: 50px;
+}
